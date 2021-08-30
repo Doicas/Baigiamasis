@@ -9,15 +9,16 @@ body{
     text-decoration: none;
     color: black;
     padding: 10px;
-    background: rgb(233, 204, 151);
+    background: whitesmoke;
     border-bottom: 1px solid rgb(189, 154, 89);
 }
 .container :hover{
-    background: rgb(189, 154, 89);
-    color: rgb(235, 219, 190);
+    background: rgb(196, 193, 193);
+    color: red;
 }
 .logo img{
      width: 100px;
+     margin-top: 3px;
 }
 .logo{
     text-align: center;
@@ -44,7 +45,7 @@ video{
     
 }
 footer{
-    background: rgb(209, 200, 148);
+    background: whitesmoke;
     border-top: 1px solid black;
     text-align: center;
 }
@@ -57,19 +58,26 @@ iframe{
 }
 
 @media screen and (min-width: 767px){
-   nav{
-       display: grid;
-       grid-template-columns: repeat(2, 1fr);
-   }
-   .logo img{
-       grid-column: 1/2;
-       padding: 50px;
-       width: 300px;
-   }
-   .container a{
-       margin: 15px;
-       border-radius: 15px;
-   }
+    nav{
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid black;
+        background: whitesmoke;
+    }
+    .logo img{
+        width: 150px;
+        padding: 15px 0 10px 15px;
+    }
+    .container a{
+        display: inline-block;
+        background: none;
+        border: none;
+        margin: 20px 50px 0 0;
+    }
+    .container :hover{
+        background:none;
+        color: red;
+    }
    .video h1{
        padding-left: 150px;
    }
@@ -83,7 +91,7 @@ iframe{
    footer{
        display: grid;
        grid-template-columns: repeat(2, 1fr);
-       background: none;
+       background: whitesmoke;
        border: 1px black solid;
        text-align: start;
        padding: 20px;

@@ -2,6 +2,9 @@ body{
     background-image:url("foto/fonas1.jpg");
     background-size: 100%;
 }
+nav{
+    margin-bottom: 5px;
+}
 .container a{
     display: flex;
     flex-direction: column;
@@ -9,15 +12,16 @@ body{
     text-decoration: none;
     color: black;
     padding: 10px;
-    background: rgb(233, 204, 151);
+    background: whitesmoke;
     border-bottom: 1px solid rgb(189, 154, 89);
 }
 .container :hover{
-    background: rgb(189, 154, 89);
-    color: rgb(235, 219, 190);
+    background: rgb(196, 193, 193);
+    color: red;
 }
 .logo img{
      width: 100px;
+     margin-top: 3px;
 }
 .logo{
     text-align: center;
@@ -26,7 +30,7 @@ body{
     width: 100%;
 }
 footer{
-    background: rgb(209, 200, 148);
+    background: whitesmoke;
     border-top: 1px solid black;
     text-align: center;
 }
@@ -39,49 +43,12 @@ iframe{
 }
 
 @media screen and (min-width: 767px){
-   nav{
-       display: grid;
-       grid-template-columns: repeat(2, 1fr);
-   }
-   .logo img{
-       grid-column: 1/2;
-       padding: 50px;
-       width: 300px;
-   }
-   .container a{
-       margin: 15px;
-       border-radius: 15px;
-   }
-   
-   body{
-       margin: 0 20px 0 20px;
-   }
-   
-   footer{
-       display: grid;
-       grid-template-columns: repeat(2, 1fr);
-       background: none;
-       border: 1px black solid;
-       text-align: start;
-       padding: 20px;
-   }
-   iframe{
-    width: 90%;
-    height: 90%;
-    margin-right: 20px;
-   }
-
-}
-
-@media screen and (min-width: 1280px){
-    nav{
+  nav{
         display: flex;
         justify-content: space-between;
-        border-bottom: 1px solid black;
+        border: 1px solid black;
         background: whitesmoke;
-    }
-    body{
-        margin: 0;
+        margin-bottom: 5px;
     }
     .logo img{
         width: 150px;
@@ -91,22 +58,69 @@ iframe{
         display: inline-block;
         background: none;
         border: none;
-        margin: 20px 150px 0 0;
-
+        margin: 20px 50px 0 0;
     }
     .container :hover{
         background:none;
         color: red;
     }
+   body{
+       margin: 0 20px 0 20px;
+   }
+   .nuotraukos{
+       display: grid;
+       grid-template-columns: repeat(2, 2fr);
+       grid-gap: 20px;
+       margin: 20px 0 20px 0;
+   }
+   footer{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        background: whitesmoke;
+        border: 1px black solid;
+        text-align: start;
+        padding: 20px;
+    }
+   iframe{
+        width: 90%;
+        height: 90%;
+        margin-right: 20px;
+   }
+
+}
+
+@media screen and (min-width: 1280px){
+    body{
+        margin: 0;
+    }
     .nuotraukos{
         display: grid;
-        grid-template-columns:repeat(2, 1fr);
-        grid-gap: 20px;
-        margin: 20px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
     }
-    footer{
-        background: whitesmoke;
-        border: none;
-        border-top: 1px solid black;
+    .pirmas{
+        grid-column: 1/3;
+        grid-row: 1/2;
     }
+    .antras{
+        grid-column: 4/4;
+        grid-row: 1/2;
+    }
+    .trecias{
+        grid-column: 4/2;
+        grid-row: 2/3;
+    }
+    .ketvirtas{
+        grid-column: 1/1;
+        grid-row: 3/3;
+    }
+    .penktas{
+        grid-column: 5/3;
+        grid-row: 3/3;
+    }
+    .sestas{
+        grid-column: 3/1;
+        grid-row: 4/4;
+    }
+
   }
